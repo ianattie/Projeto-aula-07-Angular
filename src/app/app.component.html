@@ -1,13 +1,30 @@
-<h1>Calculadora Simples</h1>
+<div class="calculator">
+  <div class="display">
+    {{ visor || '0' }}
+  </div>
 
-<input type="number" [(ngModel)]="num1" placeholder="Número 1">
-<input type="number" [(ngModel)]="num2" placeholder="Número 2">
+  <div class="buttons">
+    <button (click)="limpar()">C</button>
+    <button (click)="apagar()">←</button>
+    <button (click)="operacao('/')">÷</button>
+    <button (click)="operacao('*')">×</button>
 
-<br><br>
+    <button (click)="adicionar('7')">7</button>
+    <button (click)="adicionar('8')">8</button>
+    <button (click)="adicionar('9')">9</button>
+    <button (click)="operacao('-')">-</button>
 
-<button (click)="somar()">Somar</button>
-<button (click)="subtrair()">Subtrair</button>
-<button (click)="multiplicar()">Multiplicar</button>
-<button (click)="dividir()">Dividir</button>
+    <button (click)="adicionar('4')">4</button>
+    <button (click)="adicionar('5')">5</button>
+    <button (click)="adicionar('6')">6</button>
+    <button (click)="operacao('+')">+</button>
 
-<h2>Resultado: {{ resultado }}</h2>
+    <button (click)="adicionar('1')">1</button>
+    <button (click)="adicionar('2')">2</button>
+    <button (click)="adicionar('3')">3</button>
+    <button class="igual" (click)="calcular()">=</button>
+
+    <button class="zero" (click)="adicionar('0')">0</button>
+    <button (click)="adicionar('.')">.</button>
+  </div>
+</div>

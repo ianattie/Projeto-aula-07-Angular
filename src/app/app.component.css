@@ -1,8 +1,52 @@
-input, button {
-  margin: 5px;
-  padding: 5px;
+body {
+  background: #111;
 }
 
-h1 {
-  color: #333;
+.calculator {
+  width: 260px;
+  margin: 60px auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: #222;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.display {
+  background: black;
+  color: #0f0;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #444;
+  color: white;
+}
+
+button:hover {
+  background: #666;
+}
+
+.igual {
+  background: orange;
+  color: black;
+}
+
+.zero {
+  grid-column: span 2;
 }
